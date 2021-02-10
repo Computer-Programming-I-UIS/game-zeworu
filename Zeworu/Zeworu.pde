@@ -1,139 +1,151 @@
+String gameState;
 PImage img;
-final int stateGame=0;
-final int stateMenu = 1;
-final int stateSplashScreen = 2;
-final int stateHelp = 3;
-int state = stateSplashScreen;
-int playerNumber = 0; 
+int wins;
+int losses;
 //
-// ---------------------------------------------------------------
-void setup(){
-  //Pantalla Completa();
+Timer countDownTimer;
+int timeLeft;
+int maxTime;
+//
+
+void setup() {
   size(1280,680);
-  // Fondo
+  gameState = "START";
   img = loadImage("bg.png");
-}
-void draw(){
+  wins = 0;
+  losses = 0;
   
+  countDownTimer = new Timer(1000);
+  maxTime = 5;
+  timeLeft = maxTime;
+  
+}
+
+void draw() {
+  clearBackground();
   image(img,0,0);
-  
-  textSize(22);
- 
-  // 
-  switch(state) {
-  case stateGame:
-    drawForStateGame();
-    break;
-  case stateSplashScreen:
-    // Se muestra pantalla de inicio
-    drawForStateSplashScreen();
-    break; 
-  case stateHelp:
-    drawForStateHelp();
-    break;  
-  case stateMenu:
-    drawForStateMenu();
-    break; 
-  default:
-    // error 
-    break;
-  } 
-  
-}  
- 
-// ------------------------------------------
-// 
- 
-void drawForStateGame() {
-  text("Game...", 200, 200);
-  text(playerNumber 
-    + " Players. Hit F1 for help. Hit r to restart.", 
-  200, height-20);
-  for (int i = 1; i < 10 * playerNumber; i++) 
-    signHome(0 + i*20, 100);
+  if (gameState == "START") {
+    starGame();
+  }
+  else if (gameState == "PLAY") {
+    playGame();
+  }
+  else if (gameState == "WIN") {
+    winGame();
+  }
+  else if (gameState == "LOSE") {
+    loseGame();
+  }
 }
- 
-void drawForStateSplashScreen() {
-  // 
-  // Cuadro de bienvenida
-  noStroke();
+
+void starGame() {
   fill(0, 50);  // Cuadro Transparente
   rect (100, 100, width-200, height-200, 15, 15, 15, 15);
-  // Textos 
   fill(255, 0, 0); // red 
   textSize(48);
   text ("Welcome to Zeworu!", width/2-100, height /2);
   fill(0);
   textSize(22);
-  text ("To go to the menu, press f1", width/2-10, height /2+60);
- 
+  text ("To Start, Click Anywhere", width/2-10, height /2+60);
+  //
+  if (mousePressed == true) {
+    gameState = "PLAY";
+    countDownTimer.start();
+  }
+  showScore();
 }
- 
-void drawForStateHelp() {
-  text("the help...", 200, 100);
+void playGame() {
+  fill(0, 15, 240);
+  rect(mouseX, mouseY, 25, 34);
+  //
+  if (mouseX < 50) {
+    //win
+    wins++;
+    gameState = "WIN";
+  }
+   if (mouseX > width - 50) {
+    //lose
+    losses++;
+    gameState = "LOSE";
+   }
+   //
+   if (countDownTimer.complete() == true) {
+     if (timeLeft > 1) {
+       timeLeft --;
+       countDownTimer.start();
+     }
+     else {
+       gameState = "LOSE";
+     }
+   }
+  // TEMPORIZADOR 
+   String s = "Time left: " + timeLeft;
+   textAlign(LEFT);
+   textSize(15);
+   fill(255, 0, 0);
+   text(s, 20, 100);
+   
 }
- 
-void drawForStateMenu() {
-  text("MENU", 200, 100);
-  text("   1. Play with 2 players ", 200, 150);
-  text("   2. Play with 4 players ", 200, 200);
-  text("hit 1 or 2  ", 200, 250);
+void winGame() {
+ fill(0, 50);  // Cuadro Transparente
+  rect (100, 100, width-200, height-200, 15, 15, 15, 15);
+  fill(255, 0, 0); // red 
+  textSize(48);
+  text ("That's Great", width/2-100, height /2);
+  fill(0);
+  textSize(22);
+  text ("Play Again?", width/2-10, height /2+60);
+  //
+  drawReplayButton();
+  showScore();
 }
- 
-// ---------------------------------------------------
- 
-void keyPressed() {
-  
-  switch(state) {
-  case stateGame:
-    //     
-    if (keyCode==java.awt.event.KeyEvent.VK_F1) {
-      // F1
-      state =  stateHelp;
-    } // if 
-    else if (key == 'r') {
-      state = stateSplashScreen;
-    }
-    else {
-      //
-    }
-    break;
-  case stateSplashScreen:
-     
-    state = stateMenu;
-    break; 
-  case stateHelp:
-    // Volver al juego
-    state = stateGame;
-    break;  
-  case stateMenu:
-    
-    switch (key) {
-    case '1' :
-      playerNumber = 2;
-      state = stateGame;
-      break;
-    case '2' :
-      playerNumber = 4;
-      state = stateGame;
-      break;
-    case 'x':
-      exit();
-      break;
-    default :
-      println ("unknown input");
-      break;
-    } 
-    break; 
-  default:
-    // error 
-    break;
-  } 
-  
+void loseGame() {
+  fill(0, 50);  // Cuadro Transparente
+  rect (100, 100, width-200, height-200, 15, 15, 15, 15);
+  fill(255, 0, 0); // red 
+  textSize(48);
+  text ("You lost!", width/2-100, height /2);
+  fill(0);
+  textSize(22);
+  text ("Try Again?", width/2-10, height /2+60);
+  //
+  drawReplayButton();
+  showScore();
 }
- 
-// =====================================================================
- 
-void signHome(int x, int y) {
-  
+void resetGame() {
+  timeLeft = maxTime;
+  countDownTimer.start();
+}
+void showScore() {
+  textAlign(LEFT);
+  textSize(15);
+  fill(0);
+  String s = "Wins: " + wins + "\n" + "Losses: " + losses;
+  text(s, 20, 50);
+}
+void drawReplayButton() {
+  fill(200);
+  rect(width/2-5, height/2+80, 100, 60, 5, 5, 5, 5);
+  fill(0);
+  textSize(28);
+  text("PLAY", width/2+13, height/2+120);
+  //
+  float leftEdge = width/2 - 20;
+  float rightEdge = width/2 + 50;
+  float topEdge = height/2 + 80;
+  float bottomEdge = height/2 + 140;
+  //
+  if (mousePressed == true && 
+  mouseX > leftEdge && 
+  mouseX < rightEdge &&
+  mouseY > topEdge &&
+  mouseY < bottomEdge
+  ) {
+    resetGame();
+    gameState = "PLAY";
+  }
+}
+void clearBackground() {
+  fill(255);
+  rect(0, 0, width, height);
 }
