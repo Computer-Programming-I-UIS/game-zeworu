@@ -1,25 +1,41 @@
 String gameState;
 PImage img;
+PImage tImg;
+PImage uImg;
+Zero zero;
 int wins;
 int losses;
+ArrayList<Fire> fires = new ArrayList<Fire>();
 //
 Timer countDownTimer;
 int timeLeft;
 int maxTime;
 //
+void mousePressed() {
+  fires.add(new Fire());
+}
 
 void setup() {
   size(1280,680);
   gameState = "START";
   img = loadImage("bg.png");
+  tImg = loadImage("Fire.png");
+  uImg = loadImage("zero.png");
+  zero = new Zero();
   wins = 0;
   losses = 0;
   
   countDownTimer = new Timer(1000);
-  maxTime = 5;
+  maxTime = 60;
   timeLeft = maxTime;
   
 }
+void keyPressed() {
+  if (key == ' ') {
+    zero.jump();
+  }
+}  
+
 
 void draw() {
   clearBackground();
@@ -30,7 +46,8 @@ void draw() {
   else if (gameState == "PLAY") {
     playGame();
   }
-  else if (gameState == "WIN") {
+  
+    else if (gameState == "WIN") {
     winGame();
   }
   else if (gameState == "LOSE") {
@@ -54,19 +71,41 @@ void starGame() {
   }
   showScore();
 }
+
 void playGame() {
   fill(0, 15, 240);
   rect(mouseX, mouseY, 25, 34);
   //
-  if (mouseX < 50) {
-    //win
-    wins++;
-    gameState = "WIN";
+   if (random(1) < 0.005) {
+    fires.add(new Fire());
   }
-   if (mouseX > width - 50) {
+
+  for (Fire f : fires) {
+    f.move();
+    f.show();
+    
+  }
+    
+  if (mouseX < 50) {
     //lose
     losses++;
     gameState = "LOSE";
+  }for (Fire f : fires) {
+    f.move();
+    f.show();
+   if (zero.hits(f)) {
+            noLoop();
+            
+  zero.show();
+  zero.move();
+  }
+  
+  
+  
+   if (mouseX > width - 30) {
+    //win
+    wins++;
+    gameState = "WIN";
    }
    //
    if (countDownTimer.complete() == true) {
@@ -85,6 +124,7 @@ void playGame() {
    fill(255, 0, 0);
    text(s, 20, 100);
    
+  }
 }
 void winGame() {
  fill(0, 50);  // Cuadro Transparente
@@ -149,3 +189,4 @@ void clearBackground() {
   fill(255);
   rect(0, 0, width, height);
 }
+// =====================================================================
