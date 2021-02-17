@@ -42,4 +42,4 @@ Para reiniciar el juego se oprime la letra **r** del teclado.
 ------------
 ##### PROGRAMACION DE COMPUTADORES 1-GRUPO D2
 PROFESOR: Camilo Eduardo Rojas Ortiz.
-2021-02-16  Tuesday
+2021-02-16  Tuesday.
