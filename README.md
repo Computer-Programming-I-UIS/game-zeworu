@@ -14,10 +14,10 @@ Este proyecto de Programación de computadores consiste en la elaboración de un
 ####  **EXPLICACION DEL VIDEOJUEGO **
 El video juego consta de las siguentes características:
 - Mundo en el cual estará interactuando nuestro personaje principal.
-- Personaje "Zeworu" el cual será el que nos guiara en la aventura del videojuego.
+- Personaje "Zero" el cual será el que nos guiara en la aventura del videojuego.
 - Obstáculos y villanos.
 
-**Guia de juego** ------------------------------------------------------------------------------------------------------------------------------------
+**Guia de juego** -------------------------------------------------------------------------------------------------------------------------------------
 El objetivo principal del juego es atravesar diferentes obstáculos y derrotar los villanos que se van apreciado al momento en que el personaje va avnazando por el mundo correspondiente, si llegá a ser aniquilado por algun villano o si no supera los obstáculos perderá una vida y así se tendrá un **Game Over. **
 
 **Controles de juego** ------------------------------------------------------------------------------------------------------------------------------
