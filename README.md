@@ -48,6 +48,13 @@ El personaje podrá realizar disparar con el click derecho del mouse.
 
 ------------
 
+**Requisitos** 
+
+Tener descargada la biblioteca Minim
+
+
+------------
+
 #### IMAGENES DEL JUEGO
 ###### **Menú del Videojuego**
 ![juego1](https://user-images.githubusercontent.com/75034508/109316325-7eb15b00-7819-11eb-8879-a668f1b77b00.png)
@@ -64,6 +71,11 @@ El personaje podrá realizar disparar con el click derecho del mouse.
 ###### Banner
 ![juego5](https://user-images.githubusercontent.com/75034508/109316330-807b1e80-7819-11eb-87c8-56d2de444fb0.png)
 
+------------
+
+**Créditos** 
+SONIDOS : FREEMUSICARCHIVE.ORG
+IMAGENES: PIXABAT.COM
 
 ------------
 ##### PROGRAMACION DE COMPUTADORES 1-GRUPO D2
