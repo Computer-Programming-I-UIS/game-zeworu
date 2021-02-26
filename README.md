@@ -16,37 +16,54 @@ Este proyecto de Programación de computadores consiste en la elaboración de un
 El video juego consta de las siguentes características:
 - Mundo en el cual estará interactuando nuestro personaje principal.
 - Personaje "Zero" el cual será el que nos guiara en la aventura del videojuego.
-- Obstáculos y villanos.
+- Los llamado Newy, seran los villanos que quieren destruir Zeworu.
+
+------------
+
+**Clasificación**
+
+Recomendado para toda la familia. Clasificación E.
+
+------------
+
+
+**OBJETIVO**
+
+El objetivo principal del juego es disparar a los Newy que se van acercando a Zero, entre más Newy mates, mas puntos obtendras, si se acaba el timpo y no tienes los sufiencientes puntos se mostrara **Game Over. **
+
+------------
 
 **Guia de juego** 
 
+El objetivo principal del juego es disparar a los Newy que se van acercando a Zero, entre más Newy mates, mas puntos obtendras, si se acaba el timpo y no tienes los sufiencientes puntos se mostrara **Game Over. **
+
 ------------
-
-
-El objetivo principal del juego es atravesar diferentes obstáculos y derrotar los villanos que se van apreciado al momento en que el personaje va avnazando por el mundo correspondiente, si llegá a ser aniquilado por algun villano o si no supera los obstáculos perderá una vida y así se tendrá un **Game Over. **
 
 **Controles de juego** 
 
-------------
-
-
-Para empezar el juego se puede dar click en cualquier parte de la pantalla, al momento de dar click empezará el juego.
+Para empezar el juego se puede dar click en el boton jugar para mostrar la parte de la historia, controles y credito y asi empezar a jugar o al boton de exit para salir del jeugo.
 El personaje podrá ser manejado por las flechas del teclado.
-El personaje podrá realizar saltos con la letra** a** del teclado.
-Para reiniciar el juego se oprime la letra **r** del teclado.
+El personaje podrá realizar disparar con el click derecho del mouse.
 
 
 ------------
 
 #### IMAGENES DEL JUEGO
 ###### **Menú del Videojuego**
-![zeworu2](https://user-images.githubusercontent.com/75034508/108142045-fbfb0400-7092-11eb-879f-914045759a54.png)
+![juego1](https://user-images.githubusercontent.com/75034508/109316325-7eb15b00-7819-11eb-8879-a668f1b77b00.png)
 
-###### Juego
-![zeworu3](https://user-images.githubusercontent.com/75034508/108142044-fb626d80-7092-11eb-8fa4-409e3e63876b.png)
+###### Historia
+![juego2](https://user-images.githubusercontent.com/75034508/109316340-81ac4b80-7819-11eb-8fb7-aefc6bad209f.png)
 
-###### Si pierdes
-![zeworu1](https://user-images.githubusercontent.com/75034508/108142043-fb626d80-7092-11eb-8be8-daf8550c112f.png)
+###### Controles
+![juego3](https://user-images.githubusercontent.com/75034508/109316337-8113b500-7819-11eb-8774-3367935bc782.png)
+
+###### Creditos
+![juego4](https://user-images.githubusercontent.com/75034508/109316335-807b1e80-7819-11eb-91f0-dba3f5e7ebe5.png)
+
+###### Banner
+![juego5](https://user-images.githubusercontent.com/75034508/109316330-807b1e80-7819-11eb-87c8-56d2de444fb0.png)
+
 
 ------------
 ##### PROGRAMACION DE COMPUTADORES 1-GRUPO D2
