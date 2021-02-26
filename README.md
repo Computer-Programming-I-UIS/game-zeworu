@@ -12,7 +12,7 @@ Este proyecto de Programación de computadores consiste en la elaboración de un
 
 ------------
 
-####  **EXPLICACION DEL VIDEOJUEGO **
+####  EXPLICACION DEL VIDEOJUEGO 
 El video juego consta de las siguentes características:
 - Mundo en el cual estará interactuando nuestro personaje principal.
 - Personaje "Zero" el cual será el que nos guiara en la aventura del videojuego.
