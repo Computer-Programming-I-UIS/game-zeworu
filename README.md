@@ -22,7 +22,7 @@ El video juego consta de las siguentes características:
 
 **Clasificación**
 
-Recomendado para toda la familia. Clasificación E.
+Recomendado para toda la familia. Clasificación E todos +10.
 
 ------------
 
@@ -31,18 +31,12 @@ Recomendado para toda la familia. Clasificación E.
 
 El objetivo principal del juego es disparar a los Newy que se van acercando a Zero, entre más Newy mates, mas puntos obtendras, si se acaba el timpo y no tienes los sufiencientes puntos se mostrara **Game Over. **
 
-------------
-
-**Guia de juego** 
-
-El objetivo principal del juego es disparar a los Newy que se van acercando a Zero, entre más Newy mates, mas puntos obtendras, si se acaba el timpo y no tienes los sufiencientes puntos se mostrara **Game Over. **
 
 ------------
 
 **Controles de juego** 
 
 Para empezar el juego se puede dar click en el boton jugar para mostrar la parte de la historia, controles y credito y asi empezar a jugar o al boton de exit para salir del jeugo.
-El personaje podrá ser manejado por las flechas del teclado.
 El personaje podrá realizar disparar con el click derecho del mouse.
 
 
@@ -57,7 +51,7 @@ Tener descargada la biblioteca Minim
 
 #### IMAGENES DEL JUEGO
 ###### **Menú del Videojuego**
-![juego1](https://user-images.githubusercontent.com/75034508/109316325-7eb15b00-7819-11eb-8879-a668f1b77b00.png)
+![INICIO](https://user-images.githubusercontent.com/75034508/109765309-ab22f980-7bc2-11eb-8164-d7068db9b81f.png)
 
 ###### Historia
 ![juego2](https://user-images.githubusercontent.com/75034508/109316340-81ac4b80-7819-11eb-8fb7-aefc6bad209f.png)
@@ -68,8 +62,12 @@ Tener descargada la biblioteca Minim
 ###### Creditos
 ![juego4](https://user-images.githubusercontent.com/75034508/109316335-807b1e80-7819-11eb-91f0-dba3f5e7ebe5.png)
 
+###### Creditos
+![juego](https://user-images.githubusercontent.com/75034508/109765613-1a98e900-7bc3-11eb-9142-9d5e89723542.png)
+
 ###### Banner
-![juego5](https://user-images.githubusercontent.com/75034508/109316330-807b1e80-7819-11eb-87c8-56d2de444fb0.png)
+![BANNER](https://user-images.githubusercontent.com/75034508/109765174-79aa2e00-7bc2-11eb-8df7-7209f2d6d5b8.png)
+
 
 ------------
 
